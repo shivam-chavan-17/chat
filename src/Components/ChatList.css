@@ -1,0 +1,262 @@
+/* .chat-list {
+  width: 25%;
+  background-color: #1e1e1e;
+  padding: 10px;
+}
+
+.chat-item {
+  color: white;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  cursor: pointer;
+}
+
+.chat-item:hover {
+  background-color: #333;
+}
+
+.chat-name {
+  font-weight: bold;
+}
+
+.chat-preview {
+  color: #888;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Chat list container */
+.chat-list {
+  width: 30%;
+  height: 100vh;
+  background-color: #1e1e1e;
+  padding: 20px;
+  overflow-y:unset;
+  border-radius: 8px;
+}
+
+/* Heading at the top */
+.heading::before {
+  content: "ALL YOUR CHATS";
+  color: #d9d9d9;
+  /* margin-top: 10px; */
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+/* Button containing the chat icon and text */
+.chat-images-toggle {
+  margin: 15px 20px 15px 10px;
+  width: 94%;
+  height: 40px;
+  background-color: #f7b6b6;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex; /* Flexbox to align icon and text */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Align items to the left */
+}
+
+/* Hover effect */
+.chat-images-toggle:hover {
+  background-color: #fda2a2;
+}
+
+/* Chat icon */
+.chat-icon {
+  width: 18px; /* Adjust width of icon */
+  height: 18px; /* Adjust height of icon */
+  margin-right: 8px; /* Space between icon and text */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+/* Info paragraph */
+.chat-info {
+  margin-left: 10px;
+  color: #d9d9d9;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Individual chat item */
+.chat-item {
+  /* margin-left: 10px; */
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.chat-item:hover {
+  background-color: #333;
+  border-radius: 50px;
+}
+
+.chat-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Profile circle for each chat */
+.chat-profile-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #555;
+  border-radius: 50%; /* Circle shape */
+  margin-right: 15px;
+  flex-shrink: 0; /* Prevent the circle from shrinking */
+}
+
+/* Chat details section (name and last message) */
+.chat-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow this section to take available space */
+}
+
+.chat-name {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+}
+
+.chat-preview {
+  margin: 0;
+  color: #888;
+  font-size: 14px;
+}
+
+/* Container for new chat */
+.new-chat {
+  /* margin-left: 10px; */
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  cursor: pointer;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  padding: 5px 0 0 0;
+}
+
+img {
+  width: 30px; /* Width of the icon */
+  height: 30px; /* Height of the icon */
+  object-fit: contain; /* Ensures the icon maintains its aspect ratio */
+  margin-right: 10px; /* Space between the icon and the text */
+}
+
+/* Container for new chat info */
+.new-chat-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Ensure text is vertically centered */
+}
+
+.new-chat-info .new::before {
+  content: "Create New Bot";
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 40px; /* Set line-height to match the height of the icon */
+}
+
+/* Responsive: For smaller screens */
+@media (max-width: 768px) {
+
+  .heading::before{
+    content: "CHATS";
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .chat-list {
+    width: 15%;
+    padding: 0;
+    margin: 0; /* Full width for smaller screens */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .chat-profile-circle {
+    width: 35px; /* Reduce profile circle size */
+    height: 35px;
+  }
+
+  .chat-item{
+    margin: 0;
+  }
+
+  .chat-item-content{
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .chat-images-toggle,
+  .chat-info, .chat-preview {
+    display: none; /* Hides the toggle button and paragraph */
+  }
+
+  .new-chat-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .new-chat-info .new::before{
+    content: "";
+  }
+
+  img{
+    height: 35px;
+    width: 35px;
+    margin-right: 0;
+  }
+}
+
+/* Extra small devices (phones, smaller than 480px) */
+@media (max-width: 480px) {
+  .chat-list {
+    width: 10%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  /* Hide the last message preview on small devices */
+  .chat-preview {
+    display: none; /* Hides the last message */
+  }
+
+  /* Reduce padding and margin for a compact layout */
+  .chat-item {
+    padding: 8px;
+  }
+
+  .chat-profile-circle {
+    width: 35px; /* Reduce profile circle size */
+    height: 35px;
+  }
+
+  .chat-name {
+    font-size: 16px; /* Adjust font size for the name */
+  }
+
+  /* Hide everything except the headline on small screens */
+  .chat-images-toggle,
+  .chat-info {
+    display: none; /* Hides the toggle button and paragraph */
+  }
+}

@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+/* Chat window styles */
+.chat-window {
+  width: 80%;
+  flex-grow: 1;
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.chat-header {
+  padding: 10px 20px;
+  background-color: #2e2e2e;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2e2e2e;
+  border-radius: 8px 8px 0 0;
+}
+
+.chat-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.chat-header-left .chat-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.chat-header-left h3 {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.chat-header-right {
+  display: flex;
+  gap: 15px;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+}
+
+.icon-text p {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.chat-header-right .icon {
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+}
+
+/* Chat messages area */
+.chat-messages {
+  flex-grow: 1;
+  padding: 20px;
+  color: white;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+   /* Keeps the chat at the bottom */
+}
+
+.message-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.right-icon {
+  margin-left: 10px; /* Space between message and profile icon on the right */
+  margin-right: 0;
+}
+
+/* Sender's message alignment */
+.sender {
+  justify-content: flex-start;
+}
+
+.sender-message {
+  background-color: #444;
+  padding: 10px 15px;
+  border-radius: 15px;
+  max-width: 60%;
+  color: white;
+  font-size: 15px;
+}
+
+/* Receiver's message alignment */
+.receiver {
+  justify-content: flex-end;
+}
+
+.receiver-message {
+  background-color: #f7b6b6;
+  padding: 10px 15px;
+  border-radius: 15px;
+  max-width: 60%;
+  color: black;
+  font-size: 15px;
+}
+/* 
+@media (max-width: 768px){
+  .chat-window{
+    margin-left: 50px;
+  }
+} */

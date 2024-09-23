@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import ChatList from './Components/ChatList';
+import ChatWindow from './Components/ChatWindow';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 
 function App() {
+  // Initialize selectedChat with the first chat by default
+  const [selectedChat, setSelectedChat] = useState({
+    id: 1,
+    name: "Akshay",
+    lastMessage: "Hey, How are you?..."
+  });
+
+  // Dummy chat data
+  const chats = [
+    { id: 1, name: "Akshay", lastMessage: "Hey, How are you?..." },
+    { id: 2, name: "Aditya", lastMessage: "Order update at 3 pm..." },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <div className="app-container">
+        <ChatList chats={chats} onSelectChat={setSelectedChat} />
+        {/* Render ChatWindow with selectedChat */}
+        <ChatWindow chat={selectedChat} />
+      </div>
+      <Footer />
+    </>
   );
 }
 

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+/* Message input area styles */
+.message-input {
+  display: flex;
+  padding: 10px;
+  background-color: #1e1e1e;
+  margin: 0 10px 10px 10px;
+}
+
+.message-input input {
+  flex-grow: 1;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  padding: 0 15px 0 15px;
+  border: none;
+  border-radius: 25px; /* Rounded input field */
+  margin-right: 10px;
+  outline: none; /* Remove default outline on focus */
+  font-size: 14px; /* Optional: Adjust font size */
+}
+
+.message-input button {
+  background-color: #f7b6b6;
+  color: white;
+  border: none;
+  border-radius: 50%; /* Circular button */
+  width: 45px;
+  height: 45px; /* Same height and width for a perfect circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.message-input button:hover {
+  background-color: #fda2a2; /* Lighter red on hover */
+}
+
+.send-icon {
+  font-size: 20px; /* Size of the paper plane icon */
+  color: black;
+}

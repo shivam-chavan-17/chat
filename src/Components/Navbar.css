@@ -1,0 +1,160 @@
+/* Base styles for the Navbar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 80px 0 70px;
+  color: white;
+}
+
+/* Logo Section */
+.nav .left .one a {
+  font-size: 30px;
+  color: #f7b6b6;
+  position: relative;
+  font-weight: bold;
+  padding-right: 20px;
+  text-decoration: none;
+}
+
+.nav .left .one a::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 2px;
+  background-color: rgb(101, 101, 101);
+}
+
+/* Links Section */
+.nav .left {
+  display: flex;
+  align-items: center;
+}
+
+.nav .menu {
+  display: flex; /* Show the menu by default on large screens */
+  align-items: center;
+}
+
+/* Ensure links are displayed correctly */
+.nav .left a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav .left a:hover {
+  color: #fda2a2;
+}
+
+/* Icons */
+.icon {
+  margin-left: 20px;
+  font-size: 15px;
+  color: white;
+}
+
+.nav .left .two, .nav .left .three, .nav .left .four {
+  margin-left: 20px;
+}
+
+/* Login Button */
+.nav button {
+  padding: 8px 15px;
+  width: 100px;
+  background-color: #f7b6b6;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.nav button:hover {
+  background-color: #fda2a2;
+}
+
+/* Hide mobile login button by default */
+.login-mobile {
+  display: none;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none; /* Hidden by default on large screens */
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 20px; /* Add some spacing between the login button and hamburger icon */
+}
+
+/* Responsive: For screens smaller than 768px (tablets and phones) */
+@media (max-width: 768px) {
+  .nav {
+    padding: 10px;
+  }
+
+  /* Hide the desktop login button */
+  .right button {
+    display: none;
+  }
+
+  /* Show the hamburger icon */
+  .hamburger {
+    display: block; /* Show hamburger on small screens */
+    color: white;
+  }
+
+  /* Hide the menu by default on small screens */
+  .nav .menu {
+    display: none; /* Initially hidden on small screens */
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Show the menu when 'open' class is added */
+  .menu.open {
+    display: flex; /* Show the menu when open */
+  }
+
+  .nav .left .two, .nav .left .three, .nav .left .four {
+    margin-left: 0; /* Remove margin for mobile */
+    margin-bottom: 20px; /* Add spacing between items */
+  }
+
+  .nav .left a {
+    font-size: 20px;
+  }
+
+  /* Show the login button inside the mobile menu */
+  .login-mobile {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .nav .left .one a::after {
+    height: 0%;
+  }
+}
+
+/* Extra small screens (for phones, smaller than 480px) */
+@media (max-width: 480px) {
+  .nav .left a {
+    font-size: 16px;
+  }
+
+  .nav button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .nav .left .one a::after {
+    height: 0%;
+  }
+}
