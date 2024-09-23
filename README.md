@@ -6,9 +6,9 @@ This is created using React.js which implements a simple chat interface. The pro
 
 ### 1. Clone the Repository
 
-### `git clone https://github.com/yourusername/chat-interface.git`
+### `git clone https://github.com/shivam-chavan-17/chat.git`
 
-### `cd chat-interface`
+### `cd chat`
 
 ### 2. Install Dependencies
 
