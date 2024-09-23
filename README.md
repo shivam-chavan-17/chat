@@ -1,14 +1,14 @@
 # Chat Interface Project
 
-This is created using React.js which implements a simple chat interface. The project includes multiple components like Navbar, ChatList, MessageInput, MessageList, and Footer. This project aims to demonstrate how to build a chat-like UI.
+This is created using React.js which implements a simple chat interface. The project includes multiple components like Navbar, ChatList, ChatWindow, MessageInput, and Footer. This project aims to demonstrate how to build a chat-like UI.
 
 ## Available Scripts
 
 ### 1. Clone the Repository
 
-### `git clone https://github.com/yourusername/chat-interface.git`
+### `git clone https://github.com/shivam-chavan-17/chat.git`
 
-### `cd chat-interface`
+### `cd chat`
 
 ### 2. Install Dependencies
 
