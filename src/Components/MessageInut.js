@@ -1,6 +1,6 @@
 import React from 'react';
 import './MessageInput.css';
-import { FaPlus, FaRegCommentDots, FaPaperPlane, FaRegPaperPlane, FaTelegramPlane } from 'react-icons/fa'
+import { FaPaperPlane, FaRegPaperPlane, FaTelegramPlane } from 'react-icons/fa'
 
 
 const MessageInput = () => {
@@ -8,7 +8,7 @@ const MessageInput = () => {
         <div className="message-input">
             <input type="text" placeholder="Message" />
             <button>
-                <FaPaperPlane className="send-icon" /> {/* Replacing button text with an icon */}
+                <FaPaperPlane className="send-icon" />
             </button>
         </div>
     );

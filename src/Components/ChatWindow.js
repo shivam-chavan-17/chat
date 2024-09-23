@@ -1,4 +1,4 @@
-import {React, useRef, useEffect} from 'react';
+import { React, useRef, useEffect } from 'react';
 import './ChatWindow.css';
 import MessageInput from './MessageInut';
 import { FaChevronLeft, FaTrash } from 'react-icons/fa';
@@ -6,7 +6,6 @@ import { FaChevronLeft, FaTrash } from 'react-icons/fa';
 const ChatWindow = ({ chat }) => {
     const chatMessagesRef = useRef(null);
 
-    // Scroll chat to bottom on load
     useEffect(() => {
         if (chatMessagesRef.current) {
             chatMessagesRef.current.scrollTop = chatMessagesRef.current.scrollHeight;
@@ -32,7 +31,6 @@ const ChatWindow = ({ chat }) => {
                 </div>
             </div>
             <div className="chat-messages" ref={chatMessagesRef}>
-                {/* Dummy chats */}
                 <div className="message-row sender">
                     <img src="/lightX.png" alt="Sender" className="profile-icon" />
                     <div className="message sender-message">

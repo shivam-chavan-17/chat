@@ -14,7 +14,6 @@ const ChatList = ({ chats, onSelectChat }) => {
             {chats.map((chat) => (
                 <div key={chat.id} className="chat-item" onClick={() => onSelectChat(chat)}>
                     <div className="chat-item-content">
-                        {/* <div className="chat-profile-circle"></div> */}
                         <img src="/lightX.png" alt="photo" className='chat-profile-circle' />
                         <div className="chat-details">
                             <p className="chat-name">{chat.name}</p>

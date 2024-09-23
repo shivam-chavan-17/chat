@@ -6,33 +6,30 @@
   align-items: center;
   padding: 20px 60px;
   font-family: "Poppins", sans-serif;
-  background-color: #000000; /* Black background */
+  background-color: #000000; 
   color: white;
   flex-wrap: wrap;
 }
 
-/* Footer left section: logo */
 .footer-left {
   font-size: 30px;
   font-weight: bold;
   color: #f7b6b6;
-  margin-left: 60px; /* Align with navbar */
+  margin-left: 30px; 
 }
 
 .footer-right {
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-right: 60px; /* Align with navbar */
+  margin-right: 30px;
 }
 
-/* Contact email */
 .footer-right p {
   margin: 0;
   font-size: 14px;
 }
 
-/* Social icons */
 .social-icons {
   display: flex;
   gap: 15px;
@@ -53,7 +50,6 @@
   width: 25px;
 }
 
-/* Responsive Design for Tablets and Smaller Devices */
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
@@ -74,7 +70,7 @@
   }
 
   .social-icons {
-    gap: 20px; /* Increase gap between icons */
+    gap: 20px; 
   }
 
   .footer-right p {
@@ -82,11 +78,10 @@
   }
 
   .social-icons a {
-    font-size: 20px; /* Make icons a bit larger on small devices */
+    font-size: 20px; 
   }
 }
 
-/* Responsive Design for Mobile (Small Devices) */
 @media (max-width: 480px) {
   .footer {
     flex-direction: column;
@@ -97,7 +92,7 @@
 
   .footer-left {
     font-size: 20px;
-    margin-bottom: 15px; /* Space between logo and contact info */
+    margin-bottom: 15px; 
   }
 
   .footer-right {
@@ -110,10 +105,10 @@
   }
 
   .social-icons a {
-    font-size: 24px; /* Make icons bigger for better touch accessibility */
+    font-size: 24px;
   }
 
   .footer-right p {
-    font-size: 13px; /* Adjust font size for smaller devices */
+    font-size: 13px; 
   }
 }

@@ -1,13 +1,13 @@
-/* Base styles for the Navbar */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 80px 0 70px;
   color: white;
+  position: relative;
+  z-index: 1000; 
 }
 
-/* Logo Section */
 .nav .left .one a {
   font-size: 30px;
   color: #f7b6b6;
@@ -28,18 +28,16 @@
   background-color: rgb(101, 101, 101);
 }
 
-/* Links Section */
 .nav .left {
   display: flex;
   align-items: center;
 }
 
 .nav .menu {
-  display: flex; /* Show the menu by default on large screens */
+  display: flex; 
   align-items: center;
 }
 
-/* Ensure links are displayed correctly */
 .nav .left a {
   margin-left: 10px;
   text-decoration: none;
@@ -50,9 +48,8 @@
   color: #fda2a2;
 }
 
-/* Icons */
 .icon {
-  margin-left: 20px;
+  margin-left: 10px;
   font-size: 15px;
   color: white;
 }
@@ -61,7 +58,6 @@
   margin-left: 20px;
 }
 
-/* Login Button */
 .nav button {
   padding: 8px 15px;
   width: 100px;
@@ -75,64 +71,57 @@
   background-color: #fda2a2;
 }
 
-/* Hide mobile login button by default */
 .login-mobile {
   display: none;
 }
 
-/* Hamburger icon */
 .hamburger {
-  display: none; /* Hidden by default on large screens */
+  display: none; 
   font-size: 24px;
   cursor: pointer;
-  margin-left: 20px; /* Add some spacing between the login button and hamburger icon */
+  margin-left: 20px; 
 }
 
-/* Responsive: For screens smaller than 768px (tablets and phones) */
 @media (max-width: 768px) {
   .nav {
     padding: 10px;
   }
 
-  /* Hide the desktop login button */
   .right button {
     display: none;
   }
 
-  /* Show the hamburger icon */
   .hamburger {
-    display: block; /* Show hamburger on small screens */
+    display: block; 
     color: white;
   }
 
-  /* Hide the menu by default on small screens */
   .nav .menu {
-    display: none; /* Initially hidden on small screens */
+    display: none;
     flex-direction: column;
     align-items: flex-start;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9); 
+    position: fixed;
     top: 60px;
     left: 0;
     width: 100%;
     padding: 20px;
+    z-index: 999; 
   }
 
-  /* Show the menu when 'open' class is added */
   .menu.open {
-    display: flex; /* Show the menu when open */
+    display: flex; 
   }
 
   .nav .left .two, .nav .left .three, .nav .left .four {
-    margin-left: 0; /* Remove margin for mobile */
-    margin-bottom: 20px; /* Add spacing between items */
+    margin-left: 0;
+    margin-bottom: 20px;
   }
 
   .nav .left a {
     font-size: 20px;
   }
 
-  /* Show the login button inside the mobile menu */
   .login-mobile {
     display: block;
     margin-top: 20px;
@@ -143,7 +132,6 @@
   }
 }
 
-/* Extra small screens (for phones, smaller than 480px) */
 @media (max-width: 480px) {
   .nav .left a {
     font-size: 16px;

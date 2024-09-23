@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
 
-/* Chat window styles */
 .chat-window {
   width: 80%;
   flex-grow: 1;
@@ -12,6 +11,7 @@
   overflow: hidden;
   position: relative;
   margin-bottom: 0;
+  z-index:10;
 }
 
 .chat-header {
@@ -64,7 +64,6 @@
   font-size: 15px;
 }
 
-/* Chat messages area */
 .chat-messages {
   flex-grow: 1;
   padding: 20px;
@@ -73,7 +72,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-   /* Keeps the chat at the bottom */
 }
 
 .message-row {
@@ -90,11 +88,10 @@
 }
 
 .right-icon {
-  margin-left: 10px; /* Space between message and profile icon on the right */
+  margin-left: 10px;
   margin-right: 0;
 }
 
-/* Sender's message alignment */
 .sender {
   justify-content: flex-start;
 }
@@ -108,7 +105,6 @@
   font-size: 15px;
 }
 
-/* Receiver's message alignment */
 .receiver {
   justify-content: flex-end;
 }
