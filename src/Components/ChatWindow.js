@@ -16,7 +16,7 @@ const ChatWindow = ({ chat }) => {
         <div className="chat-window">
             <div className="chat-header">
                 <div className="chat-header-left">
-                    <img src="/lightX.png" alt="Chat Logo" className="chat-logo" /> {/* Chat logo */}
+                    <img src="/lightZ.png" alt="Chat Logo" className="chat-logo" /> {/* Chat logo */}
                     <h3>{chat.name}</h3>
                 </div>
                 <div className="chat-header-right">
@@ -32,7 +32,7 @@ const ChatWindow = ({ chat }) => {
             </div>
             <div className="chat-messages" ref={chatMessagesRef}>
                 <div className="message-row sender">
-                    <img src="/lightX.png" alt="Sender" className="profile-icon" />
+                    <img src="/lightZ.png" alt="Sender" className="profile-icon" />
                     <div className="message sender-message">
                         Hey, how can I help you?
                     </div>
@@ -45,7 +45,7 @@ const ChatWindow = ({ chat }) => {
                 </div>
 
                 <div className="message-row sender">
-                    <img src="/lightX.png" alt="Sender" className="profile-icon" />
+                    <img src="/lightZ.png" alt="Sender" className="profile-icon" />
                     <div className="message sender-message">
                         Hey, how can I help you?
                     </div>

@@ -53,20 +53,22 @@
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
-    padding: 20px;
+    /* padding: 20px; */
     align-items: center;
   }
 
   .footer-left {
     font-size: 24px;
-    margin: 10px 0;
+    /* margin: 10px 0; */
+    margin: 0 10px 0 10px;
   }
 
   .footer-right {
     flex-direction: column;
     text-align: center;
     gap: 10px;
-    margin: 10px 0;
+    /* margin: 10px 0; */
+    margin: 0 10px 0 10px;
   }
 
   .social-icons {

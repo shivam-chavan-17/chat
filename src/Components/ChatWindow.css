@@ -117,9 +117,9 @@
   color: black;
   font-size: 15px;
 }
-/* 
+
 @media (max-width: 768px){
   .chat-window{
-    margin-left: 50px;
+    margin-left: 5px;
   }
-} */
+}
